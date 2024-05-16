@@ -158,7 +158,7 @@ label {
   padding-inline: 16px 0px;
 }
 
-.login-form button, .widget button {
+.login-form button, .widget button, #controls button[data-create], #controls button[data-destroy] {
   display: flex;
   padding: 8px 16px;
   padding-block: 8px;
@@ -179,8 +179,18 @@ label {
   cursor: pointer;
 }
 
-.login-form button:hover, button:focus, .widget button:hover, .widget button:focus {
-  background: #6C8CFF;
+#controls button[data-destroy] {
+  background: #FF4E4E;
+}
+
+.login-form button:hover, button:focus,
+  .widget button:hover, .widget button:focus,
+  #controls button[data-create]:hover, #controls button[data-create]:focus {
+    background: #6C8CFF;
+}
+
+#controls button[data-destroy]:hover, #controls button[data-destroy]:focus {
+  background: #FF7070;
 }
 
 .login-form input:hover, input:focus {
@@ -207,4 +217,44 @@ label {
   font-weight: 400;
   line-height: 24px; /* 150% */
   letter-spacing: 0.64px;
+}
+
+#controls {
+  width: min-content;
+  display: flex;
+  padding: 32px;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  background: #F6F6FE;
+  margin-bottom: 16px;
+}
+
+#controls input {
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  color: #2E2F42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.64px;
+  padding: 3px 0px 3px 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#boxes {
+  width: min-content;
+  display: flex;
+  padding: 32px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 44px;
+  border-radius: 8px;
+  background: #F6F6FE;
 }
