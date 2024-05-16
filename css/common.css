@@ -71,3 +71,25 @@ body {
   letter-spacing: 0.64px;
   text-align: left;
 }
+
+.gallery {
+  list-style: none;
+  display: flex;
+  width: 1440px;
+  height: 848px;
+  padding: 100px 156px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  background: #FFF;
+}
+
+.gallery li {
+  display: flex;
+}
+
+.gallery img {
+  max-width: 360px;
+  max-height: 300px;
+  object-fit: cover;
+}
